@@ -174,14 +174,16 @@
   
   /* Grid
       ============================= */
+
+  .row {
+    display: flex;
+  }
   
   ul.row {
     margin: -1rem;
     padding: 0;
     list-style: none;
   }
-  
- 
   
   [class*='col-'] {
     margin: 1rem;
@@ -194,21 +196,16 @@
   .col-1-2 {
     width: calc((100% / 2) - 2rem);
   }
-
-  .row {
-    display: flex;
-  }
   
   /* Navbar
       ============================= */
   
-  
   .nav {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
-    display: flex;
   }
   
   .nav .nav-item {
@@ -216,13 +213,12 @@
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
-    
   }
-
+  
   .nav .nav-item + .nav-item {
     margin: var(--nav-item-margin);
   }
-  
+
   .nav .nav-link {
     display: block;
     padding: 0.5rem 0;
@@ -257,9 +253,8 @@
     padding: var(--header-padding);
          position: relative;
          z-index: 3;
-         background: transparent;
+         background: transparent !important;
   }
-  
 
   .header-container {
     display: flex;
@@ -350,22 +345,11 @@
   /* Section HERO
       ============================= */
   
-.section-hero {
-  position: relative;
-  margin-top: -8.5rem;
-}
+  .section-hero {
+    position: relative;
+    margin-top: -8.5rem;
+  }
 
-  .hero-homepage {
-    background-position: 75% 0;
-    background-repeat: no-repeat;
-    background-size: 90rem auto;
-    background-color: #010101;
-  }
-  
-  .section-hero .section-title {
-    margin-bottom: 5rem;
-  }
-  
   .section-hero .section-body {
     padding: 10rem 4rem;
   }
@@ -374,6 +358,18 @@
     color: var(--color-white);
     text-transform: uppercase;
   }
+  
+  .hero-homepage {
+    background-position: 75% 0;
+    background-repeat: no-repeat;
+    background-size: 90rem auto;
+    background-color: #010101;
+  }
+
+  .section-hero .section-title {
+    margin-bottom: 5rem;
+  }
+  
   .section-hero .section-inner {
     display: flex;
     flex-direction: column;
@@ -382,23 +378,27 @@
     min-height: 50vh;
   }
   
-
-  /* Section Latest news ============================= */
-
+  /* Section Latest news
+    ============================= */
+  
   .section-latest-news .row {
     flex-direction: row-reverse;
   }
 
-  /* Section SERVICES ============================= */
+  /* Section SERVICES
+    ============================= */
+  
   .section-services .row {
     flex-wrap: wrap;
   }
 
-  /* Section ABOUT US */
-
+  /* Section ABOUT US
+    ============================= */
+  
   .section-about-us [class*='col-'] {
     align-self: center;
   }
+
   /*** 4. CARD ***/
   
   /* Card (all styles)
@@ -527,8 +527,8 @@
     z-index: -1;
   }
 
-/*** ARTICLE PAGE ***/
-/* Section HERO (article)
+  /*** ARTICLE PAGE ***/
+  /* Section HERO (article)
     ============================= */
 
   .hero-article {
@@ -563,12 +563,13 @@
     padding: 5rem 0;
   }
 
-/* Post
+  /* Post
     ============================= */
 
   .post {
     display: flex;
   }
+
   .post-content {
     width: 100%;
   }
