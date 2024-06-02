@@ -1,0 +1,14 @@
+/* Assign margin and padding to body and p*/
+
+$no-padding: 0px;
+$no-margin: 0px;
+$set-margin: 10px;
+
+body {
+    margin: $no-margin;
+    padding: $no-padding;
+
+    p {
+        margin: $set-margin;
+    }
+}
